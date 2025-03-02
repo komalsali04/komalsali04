@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @komalsali04
-- 👀 I’m interested in Machine Learning
-- 🌱 I’m currently learning LLMs
+- 👀 I’m diving in the vast field of Machine Learning, Deep Learning, Natural Lamguage Processing, and LLMs. This space is dedicated to my projects, experiments, and learning progress as I explore the exciting world of AI.
 - 💞️ I’m looking to collaborate on ML, NLP, and LLMs projects
 - 📫 How to reach me: salikomal04@gmail.com
 - 😄 Pronouns: Techie
