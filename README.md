@@ -17,9 +17,9 @@ RNN has hidden states which uses previous hidden state as memory and current inp
 
 There is an encoder block and a decoder block in RNN and each block has it's own vocabulary. We are translating English to Hindi, so encoder will have english vocabulary and decoder will contain hindi vocabulary. These vocabularies contains the tokens(words) and each token will have its own token ID.
 
-**Let's follow these steps to convert English sentence to Hindi:**
+**Let's follow these steps to convert an English sentence to Hindi:**
 
-## **Encoder Block:**
+### **Encoder Block:**
 
 1. Convert the english tokens into embeddings(numerical representation of tokens).
 2. Initialize the hidden state of the encoder, this vector is initialised with zeros.
@@ -30,7 +30,7 @@ There is an encoder block and a decoder block in RNN and each block has it's own
    The inputs are embeddings of the tokens, eg: Token = "I", embedding = [0.1]
 5. Compute all hidden states of encoder, once the final hidden state is computed, we transfer the content of final hidden state to the decoder block.
 
-## **Decoder Block:**
+### **Decoder Block:**
 
 1. Convert all hindi tokens to embeddings(numberical representation of tokens).
 2. The initial hidden state (1st hidden state of decoder block) is equal to the final hidden state of encoder block.
@@ -51,7 +51,8 @@ There is an encoder block and a decoder block in RNN and each block has it's own
 ## **Drawback of RNN:**
 
 1. As all the previous hidden states are forwarded to the next hidden states of RNN, the final hidden state is bombarded with all the previous inputs which makes it impossible for the model to convert large data into single vector. Due to this, the model is likely to lose some amount of data.
-2. Vanishing Gradient: As we compute the gradient of model in every epoch, it gets smaller and smaller and it becomes so tiny that it stops updating the parameters of the model effectively due to which, the model forget the past tokens and end up remembering the latest tokens in the sequence. Therefore, RNN cannot capture long range dependencies. Hence, it can't be trained on long sequences.
+   
+2. **Vanishing Gradient:** As we compute the gradient of model in every epoch, it gets smaller and smaller and it becomes so tiny that it stops updating the parameters of the model effectively due to which, the model forget the past tokens and end up remembering the latest tokens in the sequence. Therefore, RNN cannot capture long range dependencies. Hence, it can't be trained on long sequences.
 
 
                                                                           
