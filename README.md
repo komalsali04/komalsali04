@@ -50,7 +50,7 @@ There is an encoder block and a decoder block in RNN and each block has it's own
 
 ## **Drawback of RNN:**
 
-1. As all the previous hidden states are forwarded to the next hidden states of RNN, the final hidden state is bombarded with all the previous inputs which makes it impossible for the model to convert large data into single vector. Due to this, the model is likely to lose some amount of data.
+1. **Loss of Long-Term context in final hidden state:** As all the previous hidden states are forwarded to the next hidden states of RNN, the final hidden state is bombarded with all the previous inputs which makes it impossible for the model to convert large data into single vector. Due to this, the model is likely to lose some amount of data.
    
 2. **Vanishing Gradient:** As we compute the gradient of model in every epoch, it gets smaller and smaller and it becomes so tiny that it stops updating the parameters of the model effectively due to which, the model forget the past tokens and end up remembering the latest tokens in the sequence. Therefore, RNN cannot capture long range dependencies. Hence, it can't be trained on long sequences.
 
